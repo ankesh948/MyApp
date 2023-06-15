@@ -10,10 +10,16 @@ const Login = () => {
     const [apidata,setapidata]= useState([]);
     
   useEffect(()=>{
+
   const getapi = async()=>{
+    try {
       const responce = await fetch('http://localhost:3004/users');
       const data = await responce.json();
       setapidata(data);
+    } catch (error) {
+      console.log('Api not working')
+    }
+     
   }
   getapi();
 },[])
