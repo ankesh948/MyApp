@@ -1,20 +1,82 @@
 {
-    "users": [
-      {
-        "username": "ankash",
-        "password": "Admin@123",
-        "email": "john.doe@example.com"
-      },
-      {
-        "username": "jazib",
-        "password": "svksvksvk",
-        "email": "jane.smith@example.com"
-      },
-      {
-        "username": "user123",
-        "password": "123456",
-        "email": "user123@example.com"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "username": "admin",
+      "password": "Admin@123",
+      "email": "ankash@gmail.com"
+    }
+  ],
+  "productlist": [
+    {
+      "id": 1
+    },
+    {
+      "sdsd": "",
+      "id": 2
+    },
+    {
+      "Title": "sdsd",
+      "Description": "sdsds",
+      "Price": "sdsd",
+      "Thumbnail": "C:\\fakepath\\about.psd",
+      "id": 3
+    },
+    {
+      "Title": "sdsd",
+      "Description": "sdsds",
+      "Price": "sdsd",
+      "Thumbnail": "C:\\fakepath\\about.psd",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "Title": "dfd",
+      "Description": "fdfdfd",
+      "Price": "fdfdfd",
+      "Thumbnail": "C:\\fakepath\\1010.png",
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "Title": "dsd",
+      "Description": "sdsds",
+      "Price": "dsds",
+      "Thumbnail": "C:\\fakepath\\1010.png",
+      "id": 11
+    },
+    {
+      "Title": "dsd",
+      "Description": "sdsds",
+      "Price": "dsds",
+      "Thumbnail": "C:\\fakepath\\1010.png",
+      "id": 12
+    },
+    {
+      "Title": "dsd",
+      "Description": "sdsds",
+      "Price": "dsds",
+      "Thumbnail": "C:\\fakepath\\1010.png",
+      "id": 13
+    },
+    {
+      "Title": "dsd",
+      "Description": "sdsds",
+      "Price": "dsds",
+      "Thumbnail": "C:\\fakepath\\1010.png",
+      "id": 14
+    }
+  ]
+}

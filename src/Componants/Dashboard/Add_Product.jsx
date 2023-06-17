@@ -1,36 +1,38 @@
-import React from 'react';
-import { useContext } from 'react'
-import { User } from '../../merage'
+import { React, useEffect } from 'react';
 import { useState } from 'react';
 import Sidebar from './Sidebar'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios';
 
-
 const Add_Product = () => {
-
-  const {users} = useContext(User)
-  console.log(users)
 
   const [Title, setTitle]= useState('')
   const [Description, setDescription]= useState('')
   const [Price, setPrice]= useState('')
   const [Thumbnail, setThumbnail]= useState('')
 
-  const handleSubmit = async (event) => {
+  const [formData, setformData] = useState('')
+
+  useEffect(() => {
+    const sendData = async () => {
+      try {
+          await axios.post('http://localhost:8000/productlist', formData)
+          .then((response)=>{console.log('Form data sent successfully')});
+      } catch (error) {
+        console.error('API Error:', error);
+      }
+    };
+    sendData(); 
+  }, []);
+
+  function handleSubmit(event){ 
     event.preventDefault();
-    const data = {
+    setformData({
         Title,
         Description,
         Price,
         Thumbnail
-      }
-      try {
-        const response = await axios.post('http://localhost:3004/users', data);
-        console.log(response.data); // Check the response data in the browser console
-      } catch (error) {
-        console.error(error);
-      }
+    })
   }
 
 
