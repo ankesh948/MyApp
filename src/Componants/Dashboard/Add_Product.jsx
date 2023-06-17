@@ -1,8 +1,11 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-
+import { useContext } from 'react'
+import { User } from '../../merage'
 
 const Add_Product = () => {
+  const {users} = useContext(User)
+  console.log(users)
   return (
     <div className='section'>
         <div className="container-fluid p-0">
