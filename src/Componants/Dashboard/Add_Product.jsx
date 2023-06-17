@@ -1,16 +1,21 @@
 import React from 'react';
+import { useContext } from 'react'
+import { User } from '../../merage'
 import { useState } from 'react';
 import Sidebar from './Sidebar'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios';
 
+
 const Add_Product = () => {
+
+  const {users} = useContext(User)
+  console.log(users)
 
   const [Title, setTitle]= useState('')
   const [Description, setDescription]= useState('')
   const [Price, setPrice]= useState('')
   const [Thumbnail, setThumbnail]= useState('')
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,17 +25,13 @@ const Add_Product = () => {
         Price,
         Thumbnail
       }
-
       try {
         const response = await axios.post('http://localhost:3004/users', data);
         console.log(response.data); // Check the response data in the browser console
       } catch (error) {
         console.error(error);
       }
-
-  
   }
-
 
 
   return (
