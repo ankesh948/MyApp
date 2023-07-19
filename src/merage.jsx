@@ -1,5 +1,5 @@
 import React from 'react'
-import { createContext ,useState,useEffect} from 'react'
+import { createContext, useState, useEffect} from 'react'
 import { createServer } from "miragejs"
 
 createServer({
@@ -11,19 +11,15 @@ createServer({
     ])
   },
 })
-
 export const User = createContext()
 
 const Merage = ({children}) => {
-
   let [users, setUsers] = useState([])
-
   useEffect(() => {
     fetch("/api/users")
       .then((response) => response.json())
       .then((json) => setUsers(json))
   }, [])
-
   return (
    <User.Provider value={{users,setUsers}} >
     {children}

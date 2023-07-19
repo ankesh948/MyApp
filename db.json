@@ -1,20 +1,29 @@
 {
-    "users": [
-      {
-        "username": "ankash",
-        "password": "Admin@123",
-        "email": "john.doe@example.com"
-      },
-      {
-        "username": "jazib",
-        "password": "svksvksvk",
-        "email": "jane.smith@example.com"
-      },
-      {
-        "username": "user123",
-        "password": "123456",
-        "email": "user123@example.com"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "username": "admin",
+      "password": "Admin@123",
+      "email": "ankash@gmail.com"
+    }
+  ],
+  "productlist": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    }
+  ]
+}

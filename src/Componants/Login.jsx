@@ -2,6 +2,7 @@ import React from 'react';
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Form, Card, Container,Button} from 'react-bootstrap';
+import axios from 'axios';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -9,20 +10,18 @@ const Login = () => {
     const [password,setPassword] = useState('');
     const [apidata,setapidata]= useState([]);
     
-  useEffect(()=>{
-
-  const getapi = async()=>{
+useEffect(() => {
+  const fetchData = async () => {
     try {
-      const responce = await fetch('http://localhost:3004/users');
-      const data = await responce.json();
-      setapidata(data);
+      const response = await axios.get('http://localhost:8000/users');
+      setapidata(response.data);
     } catch (error) {
-      console.log('Api not working')
+      console.error('Error fetching data:', error);
     }
-     
-  }
-  getapi();
-},[])
+  };
+  fetchData();
+}, []);
+
 
 const handelsubmit  =(e)=>{
     apidata.filter((m)=>{
